@@ -1,8 +1,11 @@
 package test;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import main.*;
 
 public class testMagasin {
@@ -103,6 +106,23 @@ public class testMagasin {
                 System.out.println(" ");
                 System.out.println("Liste des locations en cours pour le client1 :");
                 client1.afficherLocationsEnCours();
+                
+                //Ajout d'une location
+                HashMap<Article, Integer> desArticlesLoues3 = new HashMap<>();
+                desArticlesLoues3.put(article2, 7);
+                desArticlesLoues3.put(article3, 1);
+		Location uneLocation3 = new Location(3, new Date(117,8,1), new Date(117,8,23), desArticlesLoues3);
+                
+                //archiver les locations
+                ArrayList<Location> lesLocations = new ArrayList<>();
+                lesLocations.add(uneLocation);
+                lesLocations.add(uneLocation2);
+                lesLocations.add(uneLocation3);
+                try {
+                    unMagasin.archiverLocation(lesLocations);
+                } catch (IOException ex) {
+                    Logger.getLogger(testMagasin.class.getName()).log(Level.SEVERE, null, ex);
+                }
 	}
 
 }

@@ -1,4 +1,8 @@
 package main;
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 public class Magasin {
@@ -148,6 +152,21 @@ public class Magasin {
 	public void enregistrerLocation(Client unClient, Location uneLocation){
 		//Ajout de la location a la liste des locations du client
 		unClient.addLocation(uneLocation);
+	}
+        
+        public void archiverLocation(ArrayList<Location> locations) throws IOException{
+		
+                for(Location uneLocation : locations){
+                    if(uneLocation.getDateFin().before(new Date())){
+                        String nomFic = (uneLocation.getDateFin().getYear()+1900)+ "" + (uneLocation.getDateFin().getMonth()+1)+".loc";
+                        FileWriter fw = new FileWriter(nomFic, true);
+                        fw.write(uneLocation.toString());
+                        fw.write(System.getProperty("line.separator"));
+                        fw.close();
+                    }
+                }
+		
+	
 	}
 
 	/* (non-Javadoc)
