@@ -93,7 +93,7 @@ public class testMagasin {
                 HashMap<Article, Integer> desArticlesLoues2 = new HashMap<>();
                 desArticlesLoues2.put(article2, 4);
                 desArticlesLoues2.put(article3, 3);
-		Location uneLocation2 = new Location(2, new Date(117,8,1), new Date(117,10,21), desArticlesLoues2);
+		Location uneLocation2 = new Location(2, new Date(117,7,1), new Date(117,10,21), desArticlesLoues2);
                 System.out.println(" ");
                 System.out.println("Ajout d'une location :");
                 System.out.println(uneLocation2);
@@ -123,6 +123,10 @@ public class testMagasin {
                 } catch (IOException ex) {
                     Logger.getLogger(testMagasin.class.getName()).log(Level.SEVERE, null, ex);
                 }
+                
+                //Calculer le montant total des recettes sur une période
+                double montantRecettes = unMagasin.montantTotalRecettes(new Date(117,8,1), new Date());
+                System.out.println("le montant des recettes entre " + new Date(117,8,1) + " et " + new Date() + " est de " + montantRecettes);
 	}
 
 }

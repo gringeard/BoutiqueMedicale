@@ -168,6 +168,21 @@ public class Magasin {
 		
 	
 	}
+        
+        public double montantTotalRecettes(Date debutPeriode, Date finPeriode){
+            double montantTotal = 0;
+            for(Client unClient : this.clients){
+                for(Location uneLocation : unClient.getLocations()){
+                    //On part du principe que le client paye au début de la location
+                    if(uneLocation.getDateDebut().compareTo(debutPeriode) >= 0 && uneLocation.getDateDebut().compareTo(finPeriode) <= 0){
+                        montantTotal += uneLocation.getMontant();
+                    }
+                }
+            }
+            
+            
+            return montantTotal;
+        } 
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
