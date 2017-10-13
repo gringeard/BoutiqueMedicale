@@ -1,6 +1,7 @@
 package test;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -130,8 +131,9 @@ public class testMagasin {
                 
                 //Calculer le montant total des recettes sur une période
                 double montantRecettes = unMagasin.montantTotalRecettes(new Date(117,8,1), new Date());
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
                 System.out.println(" ");
-                System.out.println("le montant des recettes entre " + new Date(117,8,1) + " et " + new Date() + " est de " + montantRecettes);
+                System.out.println("le montant des recettes entre " + sdf.format(new Date(117,8,1)) + " et " + sdf.format(new Date()) + " est de " + montantRecettes);
 	}
 
 }

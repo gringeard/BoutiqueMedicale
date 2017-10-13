@@ -1,4 +1,5 @@
 package main;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Location {
@@ -137,7 +138,8 @@ public class Location {
 
         @Override
         public String toString() {
-            return "Location{" + "id=" + id + ", dateDebut=" + dateDebut + ", dateFin=" + dateFin + ", montant=" + montant + ", articles=" + articles + '}';
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            return "Location{" + "id=" + id + ", dateDebut=" + sdf.format(dateDebut) + ", dateFin=" + sdf.format(dateFin) + ", montant=" + montant + ", articles=" + articles + '}';
         }
         
         
