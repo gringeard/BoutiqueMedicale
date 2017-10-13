@@ -154,15 +154,16 @@ public class Magasin {
 		unClient.addLocation(uneLocation);
 	}
         
-        public void archiverLocation(ArrayList<Location> locations) throws IOException{
-		
-                for(Location uneLocation : locations){
-                    if(uneLocation.getDateFin().before(new Date())){
-                        String nomFic = (uneLocation.getDateFin().getYear()+1900)+ "" + (uneLocation.getDateFin().getMonth()+1)+".loc";
-                        FileWriter fw = new FileWriter(nomFic, true);
-                        fw.write(uneLocation.toString());
-                        fw.write(System.getProperty("line.separator"));
-                        fw.close();
+        public void archiverLocation() throws IOException{
+		for(Client unClient : this.clients){
+                    for(Location uneLocation : unClient.getLocations()){
+                        if(uneLocation.getDateFin().before(new Date())){
+                            String nomFic = (uneLocation.getDateFin().getYear()+1900)+ "" + (uneLocation.getDateFin().getMonth()+1)+".loc";
+                            FileWriter fw = new FileWriter(nomFic, true);
+                            fw.write(uneLocation.toString());
+                            fw.write(System.getProperty("line.separator"));
+                            fw.close();
+                        }
                     }
                 }
 		

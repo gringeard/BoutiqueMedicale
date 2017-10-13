@@ -112,6 +112,10 @@ public class testMagasin {
                 desArticlesLoues3.put(article2, 7);
                 desArticlesLoues3.put(article3, 1);
 		Location uneLocation3 = new Location(3, new Date(117,8,1), new Date(117,8,23), desArticlesLoues3);
+                unMagasin.enregistrerLocation(client2, uneLocation3);
+                System.out.println(" ");
+                System.out.println("Ajout d'une location :");
+                System.out.println(uneLocation3);
                 
                 //archiver les locations
                 ArrayList<Location> lesLocations = new ArrayList<>();
@@ -119,13 +123,14 @@ public class testMagasin {
                 lesLocations.add(uneLocation2);
                 lesLocations.add(uneLocation3);
                 try {
-                    unMagasin.archiverLocation(lesLocations);
+                    unMagasin.archiverLocation();
                 } catch (IOException ex) {
                     Logger.getLogger(testMagasin.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 
                 //Calculer le montant total des recettes sur une période
                 double montantRecettes = unMagasin.montantTotalRecettes(new Date(117,8,1), new Date());
+                System.out.println(" ");
                 System.out.println("le montant des recettes entre " + new Date(117,8,1) + " et " + new Date() + " est de " + montantRecettes);
 	}
 
