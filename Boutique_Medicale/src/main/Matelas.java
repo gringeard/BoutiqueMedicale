@@ -38,5 +38,12 @@ public class Matelas extends SupportHorizontal {
 		this.tempsGonfle = tempsGonfle;
 	}
 	//FIN GETTERS & SETTERS
+
+        @Override
+        public String toString() {
+            return "Matelas {" + super.toString() + ", tempsGonfle=" + tempsGonfle + '}';
+        }
+        
+        
 	
 }

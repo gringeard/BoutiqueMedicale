@@ -38,5 +38,12 @@ public class TableAlite extends SupportHorizontal {
 		this.pivotable = pivotable;
 	}
 	//FIN GETTERS & SETTERS
+
+        @Override
+        public String toString() {
+            return "TableAlite {" + super.toString() + ", pivotable=" + pivotable + '}';
+        }
+        
+        
 	
 }

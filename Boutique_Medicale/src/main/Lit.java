@@ -38,6 +38,13 @@ public class Lit extends SupportHorizontal {
 		this.degreInclin = degreInclin;
 	}
 	//FIN GETTERS & SETTERS
+
+        @Override
+        public String toString() {
+            return "Lit {" + super.toString() + ", degreInclin=" + degreInclin + '}';
+        }
 	
+        
+        
 	
 }

@@ -51,6 +51,11 @@ public class FauteuilRoulant extends Article {
 		this.poids = poids;
 	}
 	//FIN GETTERS & SETTERS
+
+        @Override
+        public String toString() {
+            return "FauteuilRoulant {" + super.toString() + ", largeurAssise=" + largeurAssise + ", poids=" + poids + '}';
+        }
 	
 	
 	

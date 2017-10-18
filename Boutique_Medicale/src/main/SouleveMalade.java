@@ -51,6 +51,12 @@ public class SouleveMalade extends Article {
 		this.degreFleau = degreFleau;
 	}
 	//FIN GETTERS & SETTERS
+
+        @Override
+        public String toString() {
+            return "SouleveMalade {" + super.toString() + ", capaciteLevage=" + capaciteLevage + ", degreFleau=" + degreFleau + '}';
+        }
 	
+        
 	
 }
