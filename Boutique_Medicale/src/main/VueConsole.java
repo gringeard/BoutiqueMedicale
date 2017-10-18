@@ -92,4 +92,29 @@ public class VueConsole {
         System.out.println("0 - Retour menu principal");
         System.out.println("Indiquez votre choix :");
     }
+
+    void afficherChoixArticlesMagasin(ArrayList<Article> articles) {
+        System.out.println("============================================");
+        System.out.println("Choix des articles");
+        for (int i = 0; i < articles.size(); i++) {
+            System.out.println((i+1) + " - " + articles.get(i).getReference() 
+                    + " " + articles.get(i).getMarque().getNom()
+                    + " " + articles.get(i).getModele().getNom()
+                    + " " + articles.get(i).getPrixJourLocation()
+                    + " " + articles.get(i).getQuantite());
+        }
+        System.out.println("0 - Valider le choix des articles");
+        System.out.println("Indiquez votre choix :");
+    }
+
+    void demanderQuantite() {
+        System.out.println("Quantité :");
+        System.out.println("Indiquez votre choix :");
+    }
+
+    void demanderId() {
+        System.out.println("============================================");
+        System.out.println("Id :");
+        System.out.println("Indiquez votre choix :");
+    }
 }
