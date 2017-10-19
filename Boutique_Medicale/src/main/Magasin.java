@@ -164,7 +164,7 @@ public class Magasin {
                     for(Location uneLocation : unClient.getLocations()){
                         if(uneLocation.getDateFin().before(new Date())){
                             String nomFic = (uneLocation.getDateFin().getYear()+1900)+ "" + (uneLocation.getDateFin().getMonth()+1)+".loc";
-                            FileWriter fw = new FileWriter(nomFic, true);
+                            FileWriter fw = new FileWriter("Ressources/ArchivesLocations/"+nomFic, true);
                             fw.write(uneLocation.toString());
                             fw.write(System.getProperty("line.separator"));
                             fw.close();
