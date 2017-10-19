@@ -1,3 +1,8 @@
+/*
+ * Contant Cyril
+ * Ringeard Gwénaël
+ */
+
 package main;
 
 public class TableAlite extends SupportHorizontal {

@@ -1,3 +1,8 @@
+/*
+ * Contant Cyril
+ * Ringeard Gwénaël
+ */
+
 package main;
 
 public class SouleveMalade extends Article {

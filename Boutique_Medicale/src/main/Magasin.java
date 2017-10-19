@@ -1,3 +1,8 @@
+/*
+ * Contant Cyril
+ * Ringeard Gwénaël
+ */
+
 package main;
 import java.io.DataOutputStream;
 import java.io.FileOutputStream;

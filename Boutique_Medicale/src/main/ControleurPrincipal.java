@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Contant Cyril
+ * Ringeard Gwénaël
  */
 package main;
 
@@ -113,7 +112,8 @@ public class ControleurPrincipal {
                 client.addLocation(location);
                 clients.set(indexClient - 1, client);
                 magasin.setClients(clients);
-                System.out.println("Location :");
+                System.out.println(location.toString());
+                /*System.out.println("Location :");
                 System.out.println(". id : " + location.getId());
                 System.out.println(". dateDebut : " + location.getDateDebut().toString());
                 System.out.println(". dateFin : " + location.getDateFin().toString());
@@ -122,7 +122,7 @@ public class ControleurPrincipal {
                 while(it.hasNext()){
                     HashMap.Entry pair = (HashMap.Entry)it.next();
                     System.out.println("    . référence : "+((Article)pair.getKey()).getReference()+" quantité : "+pair.getValue());
-                }
+                }*/
                 System.out.println("enregistrée pour le client :");
                 System.out.println(client.toString());
                 System.out.println("0 - Retour menu principal");

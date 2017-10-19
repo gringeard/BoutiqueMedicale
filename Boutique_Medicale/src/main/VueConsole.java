@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Contant Cyril
+ * Ringeard Gwénaël
  */
 package main;
 
@@ -23,7 +22,7 @@ public class VueConsole {
         System.out.println("Menu principal");
         System.out.println("1 - Afficher les articles du magasin");
         System.out.println("2 - Enregistrer une location");
-        System.out.println("3 - Afficher les locations d'un client");
+        System.out.println("3 - Afficher les locations en cours d'un client");
         System.out.println("4 - Afficher les recettes sur une période");
         System.out.println("0 - Quitter");
         System.out.println("Indiquez votre choix :");
@@ -79,11 +78,11 @@ public class VueConsole {
     
     void demanderDateDebut() {
         System.out.println("============================================");
-        System.out.println("Date de début : (format dd/mm/aaaa");
+        System.out.println("Date de début : (format mm/dd/aaaa)");
     }
     
     void demanderDateFin() {
-        System.out.println("Date de fin : (format dd/mm/aaaa");
+        System.out.println("Date de fin : (format mm/dd/aaaa)");
     }
 
     void afficherRecettesPeriode(Magasin magasin, Date dateDebut,Date dateFin) {
@@ -97,11 +96,12 @@ public class VueConsole {
         System.out.println("============================================");
         System.out.println("Choix des articles");
         for (int i = 0; i < articles.size(); i++) {
-            System.out.println((i+1) + " - " + articles.get(i).getReference() 
+            System.out.println((i+1) + " - " + articles.get(i).toString());
+            /*System.out.println((i+1) + " - " + articles.get(i).getReference() 
                     + " " + articles.get(i).getMarque().getNom()
                     + " " + articles.get(i).getModele().getNom()
                     + " " + articles.get(i).getPrixJourLocation()
-                    + " " + articles.get(i).getQuantite());
+                    + " " + articles.get(i).getQuantite());*/
         }
         System.out.println("0 - Valider le choix des articles");
         System.out.println("Indiquez votre choix :");
